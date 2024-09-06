@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "main:App.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in RecipeForm.addRecipe(name:summary:category:serving:time:ingredients:instructions:imageData:):RecipeForm.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RecipeForm.ingredientPicker():RecipeForm.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CategoryForm.updateCategory(id:name:):CategoryForm.swift">
+      </ContextState>
+      <ContextState
+         contextName = "RecipeForm.updateRecipe(id:name:summary:category:serving:time:ingredients:instructions:imageData:):RecipeForm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "recipe.ingredients">
+            </PersistentString>
+            <PersistentString
+               value = "recipe.category.name">
+            </PersistentString>
+            <PersistentString
+               value = "categories">
+            </PersistentString>
+            <PersistentString
+               value = "recipe.category">
+            </PersistentString>
+            <PersistentString
+               value = "modelContext">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CategoryForm.addCategory(name:):CategoryForm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "$name">
+            </PersistentString>
+            <PersistentString
+               value = "category.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IngredientForm.addIngredient(name:):IngredientForm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "modelContext">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CategoryForm.save():CategoryForm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "name">
+            </PersistentString>
+            <PersistentString
+               value = "category">
+            </PersistentString>
+            <PersistentString
+               value = "category.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RecipeIngredient.ingredient.setter:@__swiftmacro_10SwiftBites16RecipeIngredientC10ingredient18_PersistedPropertyfMa_.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedIngredient">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IngredientForm.save():IngredientForm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "$name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in CategorySection.empty.getter:CategorySection.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "category.recipes.isEmpty">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RecipeForm.save():RecipeForm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "categoryId">
+            </PersistentString>
+            <PersistentString
+               value = "name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RecipeForm.deleteIngredients(offsets:):RecipeForm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "recipes[0].name">
+            </PersistentString>
+            <PersistentString
+               value = "recipes[0].ingredients">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RecipeForm.addRecipe(name:summary:category:serving:time:ingredients:instructions:imageData:):RecipeForm.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in CategorySection.body.getter:CategorySection.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "category.recipes.isEmpty">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RecipeForm.save():RecipeForm.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "categories.first">
+            </PersistentString>
+            <PersistentString
+               value = "modelContext">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CategoriesView.content.getter:CategoriesView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "categories.isEmpty">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
