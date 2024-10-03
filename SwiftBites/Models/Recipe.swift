@@ -1,5 +1,5 @@
 //
-//  Recipèe.swift
+//  Recipe.swift
 //  SwiftBites
 //
 //  Created by Jean on 04/09/24.
@@ -14,10 +14,11 @@ final class Recipe {
     @Attribute(.unique)
     var name: String
     var summary: String
+    @Relationship(deleteRule: .nullify)
     var category: RecipeCategory?
     var serving: Int
     var time: Int
-    @Relationship(deleteRule: .cascade, inverse: \RecipeIngredient.recipe)
+    @Relationship(deleteRule: .cascade)
     var ingredients: [RecipeIngredient] = []
     var instructions: String
     var imageData: Data?

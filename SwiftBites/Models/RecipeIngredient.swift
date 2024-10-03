@@ -9,15 +9,13 @@ import Foundation
 import SwiftData
 
 @Model
-//final class RecipeIngredient: Identifiable, Hashable {
 final class RecipeIngredient {
     @Attribute(.unique)
     let id: UUID
-    //    var ingredient: Ingredient?
-    private(set) var ingredient: Ingredient?
+    @Relationship    (deleteRule: .nullify)
+    var ingredient: Ingredient?
     var quantity: String
-    //    @Relationship(inverse: \Recipe.ingredients)
-    //    var recipe: Recipe?
+    @Relationship(inverse: \Recipe.ingredients)
     private(set) var recipe: Recipe?
     
     init(

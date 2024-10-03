@@ -41,13 +41,7 @@ struct IngredientsView: View {
         if ingredients.isEmpty {
             empty
         } else {
-            list(for: ingredients.filter {
-                if query.isEmpty {
-                    return true
-                } else {
-                    return $0.name.localizedStandardContains(query)
-                }
-            })
+            list(for: filteredIngredients)
         }
     }
     
@@ -119,16 +113,25 @@ struct IngredientsView: View {
             .font(.title3)
     }
     private var filteredIngredients: [Ingredient] {
-        if query.isEmpty {
-            return ingredients
-        } else {
-            return ingredients.filter { $0.name.localizedStandardContains(query) }
+        let ingredientsPredicate = #Predicate<Ingredient> {
+            $0.name.localizedStandardContains(query)
+        }
+        
+        let descriptor = FetchDescriptor<Ingredient>(
+            predicate: query.isEmpty ? nil : ingredientsPredicate)
+        
+        do {
+            let filteredIngredients = try modelContext.fetch(descriptor)
+            return filteredIngredients
+        } catch {
+            return []
         }
     }
     // MARK: - Data
     
     private func delete(ingredient: Ingredient) {
         modelContext.delete(ingredient)
+        try? modelContext.save()
     }
     
     

@@ -61,16 +61,25 @@ struct RecipesView: View {
         if recipes.isEmpty {
             empty
         } else {
-            list(for: recipes.filter {
-                if query.isEmpty {
-                    return true
-                } else {
-                    return $0.name.localizedStandardContains(query) || $0.summary.localizedStandardContains(query)
-                }
-            }.sorted(using: sortOrder))
+            list(for: filteredRecipes)
         }
     }
     
+    private var filteredRecipes: [Recipe] {
+        let recipesPredicate = #Predicate<Recipe> {
+            $0.name.localizedStandardContains(query)
+        }
+        
+        let descriptor = FetchDescriptor<Recipe>(
+            predicate: query.isEmpty ? nil : recipesPredicate)
+        
+        do {
+            let filteredRecipes = try modelContext.fetch(descriptor)
+            return filteredRecipes
+        } catch {
+            return []
+        }
+    }
     private var empty: some View {
         ContentUnavailableView(
             label: {

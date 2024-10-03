@@ -86,7 +86,7 @@ struct CategoriesView: View {
                 LazyVStack(spacing: 10) {
                     ForEach(categories) { category in
                         CategorySection(category: category)
-                    }        
+                    }
                 }
             }
         }

@@ -203,7 +203,6 @@ struct RecipeForm: View {
             } else {
                 ForEach(ingredients) { ingredient in
                     HStack(alignment: .center) {
-                        //                        Text(ingredient.ingredient.name)
                         Text(ingredient.ingredient?.name ?? "")
                             .bold()
                             .layoutPriority(2)
@@ -265,14 +264,7 @@ struct RecipeForm: View {
     
     // MARK: - Data
     
-    func delete(recipe: Recipe) {
-        guard case .edit = mode else {
-            fatalError("Delete unavailable in add mode")
-        }
-        modelContext.delete(recipe)
-        try? modelContext.save()
-        dismiss()
-    }
+    
     
     func deleteIngredients(offsets: IndexSet) {
         withAnimation {
@@ -281,6 +273,20 @@ struct RecipeForm: View {
         try? modelContext.save()
     }
     
+}
+
+#Preview {
+    RecipeForm(mode: .add)
+}
+private extension RecipeForm {
+    func delete(recipe: Recipe) {
+        guard case .edit = mode else {
+            fatalError("Delete unavailable in add mode")
+        }
+        modelContext.delete(recipe)
+        try? modelContext.save()
+        dismiss()
+    }
     func save() {
         do {
             let recipe: Recipe
@@ -327,7 +333,6 @@ struct RecipeForm: View {
         } catch let error as RecipeError {
             self.error = error
         } catch {
-            //            self.error = .unknownError
             self.error = error
         }
         
@@ -399,10 +404,4 @@ struct RecipeForm: View {
         
         try modelContext.save()
         
-    }
-}
-
-#Preview {
-    RecipeForm(mode: .add)
-}
-
+    }}

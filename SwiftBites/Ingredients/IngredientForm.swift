@@ -69,7 +69,8 @@ struct IngredientForm: View {
     // MARK: - Data
     
     private func delete(ingredient: Ingredient) {
-        modelContext.delete(ingredient)    
+        modelContext.delete(ingredient)
+        try? modelContext.save()
         dismiss()
     }
     func addIngredient(name: String) throws {
